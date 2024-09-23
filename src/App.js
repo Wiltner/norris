@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [jokes, setJokes] = useState([]);
+
+  useEffect(() => {
+    function loadApi(){
+      let url = "https://api.chucknorris.io/jokes/random";
+      fetch(url)
+      .then((r) => r.json())
+      .then((json) => {
+        console.log(json)
+        setJokes(json);
+      })
+    }
+    loadApi();
+  }, []); 
+  return(
+    <div>
+      <h1 className='Title'>Chuck Norris Jokes</h1>
+      <p className='jokes'>{jokes.value}</p>
     </div>
-  );
+  )
 }
 
 export default App;
