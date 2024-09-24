@@ -6,9 +6,34 @@ body{
     box-sizing: border-box;
 }
 
-body{
-    background-color: #eb250b;
-    font-family: 'Roboto', sans-serif;
-    justify-content: center;
-    align-items: center;
+body {
+  background: linear-gradient(to right, #eb250b, #800080);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+}
+
+.jokes-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px;
+  word-wrap: break-word;
+}
+
+.jokes {
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
 }

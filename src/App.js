@@ -20,6 +20,7 @@ function App() {
     <div>
       <h1 className='Title'>Chuck Norris Jokes</h1>
       <p className='jokes'>{jokes.value}</p>
+      <button className='button' onClick={() => window.location.reload()}>New Joke</button>
     </div>
   )
 }
